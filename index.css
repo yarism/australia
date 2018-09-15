@@ -54,3 +54,7 @@ p {
     stroke-dashoffset: 0;
   }
 }
+
+#countries {
+  margin-top: 40px;
+}
