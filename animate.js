@@ -1,20 +1,24 @@
-var svg = document.getElementById("cups");
+var svg = document.getElementById("countries");
 var s = Snap(svg);
 
-var simpleCup = Snap.select('#simple-cup');
-var fancyCup = Snap.select('#fancy-cup');
+var sweden = Snap.select('#sweden');
+var australia = Snap.select('#australia');
 
-var simpleCupPoints = simpleCup.node.getAttribute('d');
-var fancyCupPoints = fancyCup.node.getAttribute('d');
+var swedenPoints = sweden.node.getAttribute('d');
+var australiaPoints = australia.node.getAttribute('d');
 
 
-var toFancy = function(){
-  simpleCup.animate({ d: fancyCupPoints }, 3000, mina.backout, toSimple);  
+var toAustralia = function(){
+  setTimeout(function(){ 
+    sweden.animate({ d: australiaPoints }, 1000, mina.linear, toSweden);  
+  }, 3000);
 }
 
-var toSimple = function(){
-  simpleCup.animate({ d: simpleCupPoints }, 3000, mina.backout, toFancy); 
+var toSweden = function(){
+  setTimeout(function(){ 
+    sweden.animate({ d: swedenPoints }, 1000, mina.linear, toAustralia); 
+  }, 3000);
 }
 
 
-toSimple();
+toAustralia();
