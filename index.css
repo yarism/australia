@@ -29,10 +29,14 @@ p {
   font-size: 20px;
 }
 
+.button:hover {
+  color: #c103bf;
+}
+
 .scene {
   text-align: center;
   height: 100vh;
-  padding-top: 20vh;
+  padding-top: 15vh;
 }
 
 .path {
